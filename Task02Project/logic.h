@@ -1,0 +1,1 @@
+int get_sum_between_zeroes(int* array, int size);
