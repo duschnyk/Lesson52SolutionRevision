@@ -8,12 +8,11 @@ int main() {
 
 	cout << "input size of array: ";
 	cin >> size;
+	int* array = new int[size];
 
-	if (size <= 0) {
+	if (size <= 1 || array == nullptr) {
 		return 0;
 	}
-
-	int* array = new int[size];
 
 	cout << "Input elements of array: ";
 
@@ -22,16 +21,8 @@ int main() {
 		cin >> *(array + i);
 	}
 
-	changeling(array, size);
-
-	string s = "";
-
-	for (int i = 0; i < size; i++)
-	{
-		s += to_string(*(array + i)) + " ";
-	}
-
-	cout << "Vector elements after transformation: " << s << endl;
+	cout << "The Value of the last local maximum is "
+		<< *(array + find_last_local_maximum_index(array, size)) << endl;
 
 	return 0;
 }

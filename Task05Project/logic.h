@@ -1,0 +1,1 @@
+int find_last_local_maximum_index(int* array, int size);
