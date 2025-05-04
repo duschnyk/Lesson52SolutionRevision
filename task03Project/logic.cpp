@@ -28,12 +28,13 @@ double get_min_ex_el(double* array, int size) {
 }
 
 int count_of_extreme_elements(double* array, int size) {
-	int count = 0;
-
-	if (get_max_ex_el(array, size) == get_min_ex_el(array, size)) {
-		return size;
+	if (array == nullptr || size <= 0)
+	{
+		return 0;
 	}
 
+	int count = 0;
+		
 	for (int i = 0; i < size; i++)
 	{
 		if (*(array + i) == get_max_ex_el(array, size)

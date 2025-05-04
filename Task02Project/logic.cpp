@@ -26,6 +26,11 @@ int get_last_zero(int* array, int size) {
 }
 
 int get_sum_between_zeroes(int* array, int size) {
+	if (size <= 0 || array == nullptr)
+	{
+		return 0;
+	}
+	
 	int sum = 0;
 
 	int first_zero = get_first_zero(array, size);
